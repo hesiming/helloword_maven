@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal" >
+
+            <cn.retech.custom_control.TabNavigation
+                android:id="@+id/tabNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shadow_side" />
+            <!-- 两旁阴影效果 -->
+
+            <ImageView
+                android:id="@+id/shadow_side_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shadow_side_full_left" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_ec6b56" />
+
+        <cn.retech.custom_control.MyViewPaper
+            android:id="@+id/book_list_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </cn.retech.custom_control.MyViewPaper>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/book_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray" >
+    </RelativeLayout>
+
+</FrameLayout>
