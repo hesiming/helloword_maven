@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DreamBook</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="my_bookshelf">我的书架</string>
+    <string name="public_bookstore">书院</string>
+    <string name="public_bookstore_title">今日书院</string>
+    <string name="private_bookstore">企业</string>
+    <string name="private_bookstore_title">企业书院</string>
+    <string name="quite_login">退出登录</string>
+    <!-- 导航条字体大小 -->
+    <string name="tabnavigation_text_size">16</string>
+    <!-- 导航条滑动距离算子 -->
+    <string name="tabnavigation_scroll_operator">2</string>
+    <!-- 导航条按钮数 -->
+    <string name="tabnavigation_button_number">3</string>
+    <!-- 未完成的进度圈的宽度 -->
+    <string name="progressStrokeWidth">3</string>
+    <!-- 已经完成的进度圈的宽度 -->
+    <string name="finishProgressStrokeWidth">3</string>
+    <!-- 每行显示的书本数 -->
+    <string name="eachColumnBookNumber">3</string>
+
+    <bool name="isOpen">true</bool>
+
+</resources>

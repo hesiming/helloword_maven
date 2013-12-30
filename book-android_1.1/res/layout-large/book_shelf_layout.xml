@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity" >
+
+    <!-- 顶部title -->
+
+    <RelativeLayout
+        android:id="@+id/bookshelf_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_page_title_background"
+        android:clickable="false"
+        android:onClick="onClickForNothing" >
+
+        <Button
+            android:id="@+id/public_bookstore_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/public_bookstore"
+            android:textColor="@drawable/book_shelf_selector_botton"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/my_bookshelf"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/private_bookstore_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/private_bookstore"
+            android:textColor="@drawable/book_shelf_selector_botton"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <!-- 顶部title -->
+    <!-- 底部退出 -->
+
+    <RelativeLayout
+        android:id="@+id/bookshelf_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.85"
+        android:background="#ef6b5c"
+        android:onClick="onClickForNothing" >
+
+        <TextView
+            android:id="@+id/quite_login_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="@string/quite_login"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <!-- 底部退出 -->
+
+
+    <!-- 中间GridView和搜索控件 begin -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bookshelf_bottom_layout"
+        android:layout_below="@id/bookshelf_title_layout" >
+
+        <cn.retech.custom_control.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_474747"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <cn.retech.custom_control.SearchLayout
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp" />
+
+                <cn.retech.custom_control.DragGridLayout
+                    android:id="@+id/bookstore_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/search_layout"
+                    android:layout_marginTop="20dp"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:scrollbars="none" />
+            </RelativeLayout>
+        </cn.retech.custom_control.MyScrollView>
+
+        <LinearLayout
+            android:id="@+id/search_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+        </LinearLayout>
+    </FrameLayout>
+    <!-- 中间GridView和搜索控件 end -->
+
+</RelativeLayout>

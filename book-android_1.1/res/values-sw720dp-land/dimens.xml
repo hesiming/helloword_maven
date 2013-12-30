@@ -1,0 +1,20 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+         自定义屏幕大小，类似10寸
+    -->
+    <dimen name="activity_horizontal_margin">128dp</dimen>
+    <dimen name="book_name_text_size">15sp</dimen>
+    <dimen name="book_author_text_size">13sp</dimen>
+    <dimen name="book_size_text_size">12sp</dimen>
+    <dimen name="book_cell_width">140dp</dimen>
+    <dimen name="book_image_height">190dp</dimen>
+    <dimen name="book_folder_width">150dp</dimen>
+    <dimen name="gridView_horizontalSpacing">40dp</dimen>
+    <!-- 开机动画的参数设置 -->
+    <dimen name="welcome_layout_height">1030dp</dimen>
+    <dimen name="welcome_image_width">1000dp</dimen>
+
+</resources>
