@@ -1,4 +1,4 @@
-package cn.retech.adapter;
+package main.java.cn.retech.adapter;
 
 import java.util.ArrayList;
 import java.util.List;

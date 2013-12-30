@@ -1,4 +1,4 @@
-package cn.retech.custom_control;
+package main.java.cn.retech.custom_control;
 
 import java.util.Observable;
 import java.util.Observer;

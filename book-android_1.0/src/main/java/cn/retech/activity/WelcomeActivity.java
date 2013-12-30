@@ -1,13 +1,14 @@
-package cn.retech.activity;
+package main.java.cn.retech.activity;
 
+import main.java.cn.retech.custom_control.ICustomControlDelegate;
+import main.java.cn.retech.custom_control.WelcomeCustomControl;
+import main.java.cn.retech.custom_control.WelcomeCustomControl.WelcomeCustomControlTypeEnum;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-import cn.retech.custom_control.ICustomControlDelegate;
-import cn.retech.custom_control.WelcomeCustomControl;
-import cn.retech.custom_control.WelcomeCustomControl.WelcomeCustomControlTypeEnum;
+import cn.retech.activity.R;
 import cn.retech.toolutils.DebugLog;
 
 import com.umeng.analytics.MobclickAgent;

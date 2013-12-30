@@ -1,7 +1,9 @@
-package cn.retech.activity;
+package main.java.cn.retech.activity;
 
 import java.io.File;
 
+import main.java.cn.retech.adapter.BookStoreAdapter;
+import main.java.cn.retech.custom_control.MyGridLayout;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,8 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.RelativeLayout;
-import cn.retech.adapter.BookStoreAdapter;
-import cn.retech.custom_control.MyGridLayout;
+import cn.retech.activity.R;
 import cn.retech.domainbean_model.booklist_in_bookstores.BookInfo;
 import cn.retech.domainbean_model.booklist_in_bookstores.BookListInBookstoresNetRequestBean;
 import cn.retech.domainbean_model.booklist_in_bookstores.BookListInBookstoresNetRespondBean;

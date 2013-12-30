@@ -1,10 +1,10 @@
-package cn.retech.adapter;
+package main.java.cn.retech.adapter;
 
+import main.java.cn.retech.custom_control.BookStoreBookCell;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import cn.retech.custom_control.BookStoreBookCell;
 import cn.retech.domainbean_model.local_book_list.LocalBook;
 import cn.retech.domainbean_model.local_book_list.LocalBookList;
 

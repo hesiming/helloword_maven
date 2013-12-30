@@ -1,7 +1,10 @@
-package cn.retech.activity;
+package main.java.cn.retech.activity;
 
 import java.io.File;
 
+import main.java.cn.retech.adapter.BookShelfAdapter;
+import main.java.cn.retech.custom_control.MyGridLayout;
+import main.java.cn.retech.custom_control.SearchLayout;
 import android.animation.Animator;
 import android.animation.Animator.AnimatorListener;
 import android.app.Activity;
@@ -27,9 +30,7 @@ import android.widget.SearchView.OnCloseListener;
 import android.widget.SearchView.OnQueryTextListener;
 import android.widget.TextView;
 import android.widget.Toast;
-import cn.retech.adapter.BookShelfAdapter;
-import cn.retech.custom_control.MyGridLayout;
-import cn.retech.custom_control.SearchLayout;
+import cn.retech.activity.R;
 import cn.retech.domainbean_model.local_book_list.LocalBook;
 import cn.retech.domainbean_model.local_book_list.LocalBookList;
 import cn.retech.domainbean_model.login.LogonNetRequestBean;

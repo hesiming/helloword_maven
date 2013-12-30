@@ -1,8 +1,17 @@
-package cn.retech.activity;
+package main.java.cn.retech.activity;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import main.java.cn.retech.adapter.MyFragmentPagerAdapter;
+import main.java.cn.retech.custom_control.ControlOnActionEnum;
+import main.java.cn.retech.custom_control.ICustomControlDelegate;
+import main.java.cn.retech.custom_control.MyViewPaper;
+import main.java.cn.retech.custom_control.MyViewPaper.OnScrollListener;
+import main.java.cn.retech.custom_control.PageTitle;
+import main.java.cn.retech.custom_control.TabNavigation;
+import main.java.cn.retech.custom_control.TabNavigation.OnScrollFullListener;
+import main.java.cn.retech.custom_control.TabNavigation.OnTabChangeListener;
 import android.animation.Animator;
 import android.animation.Animator.AnimatorListener;
 import android.app.ActionBar;
@@ -24,15 +33,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-import cn.retech.adapter.MyFragmentPagerAdapter;
-import cn.retech.custom_control.ControlOnActionEnum;
-import cn.retech.custom_control.ICustomControlDelegate;
-import cn.retech.custom_control.MyViewPaper;
-import cn.retech.custom_control.MyViewPaper.OnScrollListener;
-import cn.retech.custom_control.PageTitle;
-import cn.retech.custom_control.TabNavigation;
-import cn.retech.custom_control.TabNavigation.OnScrollFullListener;
-import cn.retech.custom_control.TabNavigation.OnTabChangeListener;
+import cn.retech.activity.R;
 import cn.retech.domainbean_model.book_categories.BookCategoriesNetRequestBean;
 import cn.retech.domainbean_model.book_categories.BookCategoriesNetRespondBean;
 import cn.retech.domainbean_model.book_categories.BookCategory;

@@ -1,12 +1,13 @@
-package cn.retech.toolutils;
+package main.java.cn.retech.toolutils;
 
+import main.java.cn.retech.activity.MyApplication;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.text.TextUtils;
-import cn.retech.activity.MyApplication;
+import cn.retech.toolutils.DebugLog;
 
 /**
  * 用于判断当前网络连接类型，接入点，代理服务器信息。 可以自动补齐代理(有用户只设置了apn,而没有设置代理.

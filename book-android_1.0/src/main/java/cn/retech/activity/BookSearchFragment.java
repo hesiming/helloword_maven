@@ -1,7 +1,8 @@
-package cn.retech.activity;
+package main.java.cn.retech.activity;
 
 import java.io.File;
 
+import main.java.cn.retech.adapter.BookStoreAdapter;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.retech.adapter.BookStoreAdapter;
+import cn.retech.activity.R;
 import cn.retech.domainbean_model.book_search.BookSearchNetRequestBean;
 import cn.retech.domainbean_model.booklist_in_bookstores.BookInfo;
 import cn.retech.domainbean_model.booklist_in_bookstores.BookListInBookstoresNetRespondBean;

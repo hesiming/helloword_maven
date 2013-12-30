@@ -1,4 +1,4 @@
-package cn.retech.activity;
+package main.java.cn.retech.activity;
 
 import java.io.File;
 

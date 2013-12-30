@@ -1,4 +1,4 @@
-package cn.retech.activity;
+package main.java.cn.retech.activity;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,6 +10,7 @@ import java.util.zip.ZipInputStream;
 
 import kr.co.netntv.player4ux.Player4UxView;
 import kr.co.netntv.player4ux.PlayerCore;
+import main.java.cn.retech.custom_control.MemoryStatus;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -34,7 +35,7 @@ import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
-import cn.retech.custom_control.MemoryStatus;
+import cn.retech.activity.R;
 import cn.retech.toolutils.DebugLog;
 
 import com.umeng.analytics.MobclickAgent;
