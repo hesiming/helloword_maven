@@ -9,12 +9,11 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.entity.BufferedHttpEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import android.content.Context;
 import cn.retech.global_data_cache.GlobalDataCacheForMemorySingleton;
 import cn.retech.my_domainbean_engine.http_engine.concrete.HttpClientForSupportSSL;
 
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
-
-import android.content.Context;
 
 public class HttpClientImageDownloaderForSSL extends BaseImageDownloader {
 
