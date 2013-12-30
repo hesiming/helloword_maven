@@ -8,12 +8,12 @@
         android:layout_height="match_parent"
         android:scrollbars="none" >
 
-        <cn.retech.custom_control.MyGridView
+        <cn.retech.custom_control.MyGridLayout
             android:id="@+id/book_list_gridView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="25dp"
             android:gravity="center"
+            android:paddingBottom="25dp"
             android:scrollbars="none" />
     </cn.retech.custom_control.PullDownAndUpView>
 

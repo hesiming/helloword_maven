@@ -39,7 +39,7 @@ import cn.retech.toolutils.DebugLog;
 
 import com.umeng.analytics.MobclickAgent;
 
-public class ShowBookTestActivity extends Activity {
+public class ShowBookActivity extends Activity {
 
 	private class ExtractZipFileTaskInLocal extends AsyncTask<String, Integer, String> {
 		int entryCount = 0;
@@ -140,7 +140,6 @@ public class ShowBookTestActivity extends Activity {
 				}
 			} else {
 				return "解压课件所需要的空间不足！";
-				// return "コンテンツを解凍する空き容量が足りません。";
 			}
 		}
 
@@ -149,7 +148,7 @@ public class ShowBookTestActivity extends Activity {
 			findViewById(R.id.progress_layout).setVisibility(View.GONE);
 			if (result.contentEquals("Success") == false) {
 				if (result.contentEquals("MemoryError") == true) {
-					Toast.makeText(ShowBookTestActivity.this, "Memory Error! (File size: " + MemoryStatus.formatSize(zipFile.length()) + ")", 3000).show();
+					Toast.makeText(ShowBookActivity.this, "Memory Error! (File size: " + MemoryStatus.formatSize(zipFile.length()) + ")", Toast.LENGTH_SHORT).show();
 					finish();
 					return;
 				} else {
@@ -227,7 +226,7 @@ public class ShowBookTestActivity extends Activity {
 	@Override
 	public boolean dispatchKeyEvent(KeyEvent event) {
 		if (event.getKeyCode() == KeyEvent.KEYCODE_BACK && event.getAction() == 0) {
-			AlertDialog.Builder alert = new AlertDialog.Builder(ShowBookTestActivity.this);
+			AlertDialog.Builder alert = new AlertDialog.Builder(ShowBookActivity.this);
 			alert.setTitle("DreamBook");
 			alert.setMessage("是否返回首页？");
 			alert.setPositiveButton("是", new DialogInterface.OnClickListener() {
@@ -245,7 +244,7 @@ public class ShowBookTestActivity extends Activity {
 			});
 
 			alert.setCancelable(false);
-			if (!ShowBookTestActivity.this.isFinishing()) {
+			if (!ShowBookActivity.this.isFinishing()) {
 				alert.show();
 			}
 			return true;
@@ -398,7 +397,7 @@ public class ShowBookTestActivity extends Activity {
 	}
 
 	private void errorMessage() {
-		Toast.makeText(ShowBookTestActivity.this, "无法正确读取课件，请确认设备以及SD卡的可用空间，或者在删除课件之后重新下载！", Toast.LENGTH_SHORT).show();
+		Toast.makeText(ShowBookActivity.this, "无法正确读取课件，请确认设备以及SD卡的可用空间，或者在删除课件之后重新下载！", Toast.LENGTH_SHORT).show();
 		File currentContentsDir = new File(mContentsPath);
 		String strZipFile;
 		if (mZipFilepath == null) {
@@ -426,7 +425,7 @@ public class ShowBookTestActivity extends Activity {
 	private void initPlayer4UxView() {
 		bInit = true;
 		FrameLayout parentView = (FrameLayout) findViewById(R.id.main_frame);
-		mGLView = new Player4UxView(this, getApplication(), true, 16, 8, mContentsPath, parentView, ShowBookTestActivity.class);
+		mGLView = new Player4UxView(this, getApplication(), true, 16, 8, mContentsPath, parentView, ShowBookActivity.class);
 		parentView.addView(mGLView);
 	}
 
@@ -464,8 +463,8 @@ public class ShowBookTestActivity extends Activity {
 		}
 		DebugLog.e(TAG, "read after");
 		int orientation = PlayerCore.getOrientation();
-		Editor editor = getSharedPreferences(ShowBookTestActivity.PREFERENCE_FILE, MODE_PRIVATE).edit();
-		editor.putInt(ShowBookTestActivity.ORIENTATION, orientation);
+		Editor editor = getSharedPreferences(ShowBookActivity.PREFERENCE_FILE, MODE_PRIVATE).edit();
+		editor.putInt(ShowBookActivity.ORIENTATION, orientation);
 		editor.commit();
 		if (orientation == 0) {
 			DebugLog.e(TAG, "CONTENTS: LANDSCAPE");

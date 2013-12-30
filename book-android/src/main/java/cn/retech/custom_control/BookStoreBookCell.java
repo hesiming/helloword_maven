@@ -11,8 +11,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.retech.activity.R;
 import cn.retech.domainbean_model.local_book_list.LocalBook;
-import cn.retech.global_data_cache.GlobalConstant;
 import cn.retech.toolutils.DebugLog;
+import cn.retech.toolutils.GlobalConstantForThisProject;
 import cn.retech.toolutils.ToolsFunctionForThisProgect;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -169,7 +169,7 @@ public class BookStoreBookCell extends RelativeLayout implements Observer {
 		bookname_textView.setText(book.getBookInfo().getName());
 		author_textView.setText(book.getBookInfo().getAuthor());
 
-		int priceImageId = GlobalConstant.getPriceImageMap().get(book.getBookInfo().getPrice());
+		int priceImageId = GlobalConstantForThisProject.getPriceImageMap().get(book.getBookInfo().getPrice());
 
 		book_price_imageView.setBackgroundResource(priceImageId);
 		translucent_image_layout.setVisibility(View.GONE);

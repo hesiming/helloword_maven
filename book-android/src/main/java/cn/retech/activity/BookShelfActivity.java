@@ -45,8 +45,6 @@ import cn.retech.toolutils.ToolsFunctionForThisProgect;
 
 import com.umeng.analytics.MobclickAgent;
 
-
-
 public class BookShelfActivity extends Activity {
 	private final String TAG = this.getClass().getSimpleName();
 	// 开机动画是否完成
@@ -157,6 +155,9 @@ public class BookShelfActivity extends Activity {
 					break;
 				case kBookStateEnum_Pause:// 暂停(也就是未下载完成, 可以进行断点续传)
 					book.startDownloadBook();
+					break;
+				case kBookStateEnum_GetBookDownloadUrl:
+					book.stopDownloadBook();
 					break;
 				case kBookStateEnum_NotInstalled:// 未安装(已经下载完成, 还未完成安装)
 					book.unzipBookZipResSelectorInBackground();
@@ -419,8 +420,8 @@ public class BookShelfActivity extends Activity {
 
 	private void readDocument(final File file) {
 		Intent intent = new Intent();
-		intent.setClass(BookShelfActivity.this, ShowBookTestActivity.class);
-		intent.putExtra(ShowBookTestActivity.EXTRA_ZIP_FILE, file.getPath());
+		intent.setClass(BookShelfActivity.this, ShowBookActivity.class);
+		intent.putExtra(ShowBookActivity.EXTRA_ZIP_FILE, file.getPath());
 		startActivity(intent);
 	}
 

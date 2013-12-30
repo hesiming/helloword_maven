@@ -27,7 +27,6 @@ import cn.retech.my_domainbean_engine.domainbean_network_engine_singleton.IDomai
 import cn.retech.my_domainbean_engine.net_error_handle.NetErrorBean;
 import cn.retech.toolutils.DebugLog;
 
-
 public class BookSearchFragment extends Fragment implements IFragmentOptions {
 	private final String TAG = this.getClass().getSimpleName();
 	private BookStoreAdapter bookStoreAdapter;
@@ -95,6 +94,9 @@ public class BookSearchFragment extends Fragment implements IFragmentOptions {
 				case kBookStateEnum_Pause:// 暂停(也就是未下载完成, 可以进行断点续传)
 					book.startDownloadBook();
 					break;
+				case kBookStateEnum_GetBookDownloadUrl:
+					book.stopDownloadBook();
+					break;
 				case kBookStateEnum_NotInstalled:// 未安装(已经下载完成, 还未完成安装)
 					book.unzipBookZipResSelectorInBackground();
 					break;
@@ -156,8 +158,8 @@ public class BookSearchFragment extends Fragment implements IFragmentOptions {
 
 	private void readDocument(final File file) {
 		Intent intent = new Intent();
-		intent.setClass(getActivity(), ShowBookTestActivity.class);
-		intent.putExtra(ShowBookTestActivity.EXTRA_ZIP_FILE, file.getPath());
+		intent.setClass(getActivity(), ShowBookActivity.class);
+		intent.putExtra(ShowBookActivity.EXTRA_ZIP_FILE, file.getPath());
 		startActivity(intent);
 	}
 

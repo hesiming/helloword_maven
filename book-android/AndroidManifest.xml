@@ -62,22 +62,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="cn.retech.activity.ShowBookTestActivity"
+            android:name="cn.retech.activity.ShowBookActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
             android:name="cn.retech.activity.BookShelfActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity
-            android:name="cn.retech.activity.TestStoreListViewActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity
-            android:name="cn.retech.activity.TestStoreGridViewActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity
-            android:name="cn.retech.activity.TestShelfListViewActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity
-            android:name="cn.retech.activity.TestShelfGridViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
             android:name="cn.retech.activity.BookStoreActivity"
