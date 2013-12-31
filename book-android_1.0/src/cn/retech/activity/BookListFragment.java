@@ -34,6 +34,7 @@ import cn.retech.toolutils.DebugLog;
 public class BookListFragment extends Fragment implements IFragmentOptions {
 	private final String TAG = this.getClass().getSimpleName();
 
+	// 测试测试是否能提交
 	public static enum LogonStateEnum {
 		PRIVATE_BOOK_STORE("private_book_store"), PUBLIC_BOOK_STORE("public_book_store");
 
